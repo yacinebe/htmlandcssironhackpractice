@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 
+/* General styling */
+
 * {
   margin: 0px;
   padding: 0px;
@@ -10,6 +12,58 @@ font-family: Roboto;
 font-size: 10px;
 line-height: 3.5em;
 font-weight: 300;
+}
+
+/* Styling the navigation bar - navigation bar stacks up for mobile devices */
+
+.nav-bar {
+  background: rgb(25,33,41);
+  color: white;
+  padding-top:14px;
+  padding-bottom:14px;
+}
+
+.nav-bar-list {
+  list-style: none;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-bar-list-item {
+  font-size: 2em; 
+  text-decoration: none;
+  color: white;
+  width: 33%;
+
+}
+
+.nav-bar-list-item:hover {
+  font-weight: bold;
+}
+
+@media all and (max-width:900px) {
+
+  .nav-bar-list {
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 20px;
+    }
+
+}
+
+/* Styling the header - Font size is reduced for mobile screens */
+
+.main_header {
+
+  background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:650px;
+  padding: 50px;
+  position: relative;
+  
 }
 
 h1 {
@@ -25,10 +79,146 @@ h2 {
   color: #008080;
 }
 
+.secondary_title {
+  color:white;
+  text-shadow: #020819 8px -20px 9px;
+}
+
+.page_quote {
+  
+  position:absolute;
+  left: 10%;
+  bottom: 25vh;
+  font-size: 2.5em;
+}
+
+@media all and (max-width:900px) {
+
+    .main_header {
+  
+    font-size: 0.5em;
+   
+    
+  }
+}  
+
+/*Styling first general information section - Container is a flexbox which direction changes depending on screen size*/
+
+.dark_background {
+  background: rgb(25,33,41);
+  color: white;
+}
+
+
+.container
+
+{
+  
+  margin: auto 15% auto 15%;
+  padding: 75px 0;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+
+#general_information
+
+{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+#general_information hr {
+
+  display: none;
+}
+
 h3 {
   font-size: 4.2em;
   text-align: center;
 }
+
+#general_information
+
+{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.general_text {
+  font-size: 2em;
+  font-family: Roboto;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 5px 5px 5px;
+}
+
+.general_information_link {
+  background:rgb(67, 163, 230);
+  text-decoration: none;
+  font-family: Roboto Condensed;
+  font-size: 2em;
+  color: white;
+  letter-spacing: 0.5px;
+  text-align: center;
+  
+ 
+}
+
+@media all and (max-width:900px) {
+
+    .main_header {
+  
+    font-size: 0.5em;
+   
+    
+  }
+  
+  .container
+  {
+  
+    margin: auto;
+    width: 100vw;
+    flex-direction: column;
+  }
+  
+   #general_information 
+  
+  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  
+  }
+  
+ 
+ #general_information hr {
+
+  margin-top: 30px;
+  display: block;
+
+ }
+
+
+ 
+  h3
+  
+  {
+  
+    font-size: 2em;
+  }
+  
+  }
+  
+
+/*Styling the day structure section with a grid used for wrapper class*/
+
 
 h4 {
   font-size: 1.5em;
@@ -43,114 +233,19 @@ p {
   font-family: Roboto;
 }
 
-.nav-bar {
-  background: rgb(25,33,41);
-  color: white;
-  padding-top:14px;
-  padding-bottom:14px;
-  height: 35px;
-}
-
-.nav-bar-list {
-  list-style: none;
-  margin: 0 auto;
-  width:1200px;
-}
-
-.nav-bar-list-item {
-  font-size: 2em; 
-  text-decoration: none;
-  text-align: center;
-  color: white;
-  float: left;
-  width: 33%;
-  
-}
-
-.page_quote {
-  
-  position:absolute;
-  left: 10%;
-  bottom: 25vh;
-  font-size: 2.5em;
-}
-
-.secondary_title {
-  color:white;
-  text-shadow: #020819 8px -20px 9px;
-}
-
-.main_header {
-background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-background.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:650px;
-  padding: 50px;
-  position: relative;
-  
-}
-
-.container
+.simple_container 
 
 {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 75px 0;
-  
+
+padding: 75px;
+
 }
 
-.dark_background {
-   background: rgb(25,33,41);
-   color: white;
-}
 
-.general_text {
-  font-size: 2em;
-  font-family: Roboto;
-  font-weight: 100;
-  text-align: center;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+.information_box {
 
-.general_information_link {
-  background:rgb(67, 163, 230);
-  text-decoration: none;
-  font-family: Roboto Condensed;
-  font-size: 2em;
-  color: white;
-  letter-spacing: 0.5px;
-  text-align: center;
-  
-}
+  padding: 15px 15px 15px 15px;
 
-.col
-
-{
-  
-  float:left;
-}
-
-.col-3 {
-  
-  width:30%;
-}
-
-.col-middle
-
-{
-  
-  margin-left:5%;
-  margin-right:5%;
-}
-
-.clearfix
-
-{
-  clear: both;
-  
 }
 
 
@@ -164,7 +259,7 @@ background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/i
   box-shadow: 2px 2px 10px 0 #eee;
   box-sizing: border-box;
   margin: 50px 5% 0 5%;
-  width: 40%; 
+  width: 60%; 
   padding: 20px;
   
  
@@ -181,6 +276,7 @@ background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/i
      background: white;
  }
 
+/*Styling the team section*/
 
 
 #team .section_text {
@@ -205,14 +301,130 @@ background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/i
   font-size: 1.5em;
   font-weight: 700;
   text-align: center;
+  width: 20%;
 }
+
+#team .container {
+
+  margin: auto;
+  justify-content: space-evenly;
+
+}
+
+@media all and (max-width:900px) {
+
+  #team .member_name {
+  
+    width: 80%;
+
+  }
+
+  #team .simple_container {
+
+    padding: 15px 5px 5px 5px;
+  }
+
+  #team .container {
+
+   
+
+    align-items: center;
+    padding-top: 15px;
+  
+  }
+
+
+
+}
+
+/* Styling the schedule section */
+
+#schedule_section
+
+{
+
+width: 60%;
+text-align: center;
+margin: auto;
+
+
+}
+
+.schedule_table 
+
+{
+  
+  Margin: 20px auto 40px auto;
+  font-size: 1.5em;
+
+  table-layout: fixed;
+  width: 80%;
+
+  
+
+}
+
+.schedule_table td, th
+
+{
+  
+  border-bottom: 1px solid black;
+  padding: 5px 0 10px 10px;
+  text-align: center;
+
+}
+
+.schedule_divider {
+  
+  margin-top: 10px;
+}
+
+
+@media all and (max-width:900px) {
+
+  #schedule_section {
+
+   padding: 10px 5px 10px 5px;
+   width: 85%;
+   
+  }
+
+  .schedule_table {
+
+    font-size: 1.2em;
+    margin: 50px auto 20px auto;
+  }
+
+.schedule_table  th{
+  transform: rotate(-90deg);
+
+  border-style: none;
+  margin-top: 5px;
+  
+  }
+
+}
+
+/*Styling the footer */
 
 .footer_class {
   text-align:center;
   font-size:1.9em;
-    padding-left:100px;
-  padding-right:100px;
+  padding: 50px 0 50px 0;
   margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left_pane_one_third {
+
+  width: 30%;
+}
+
+.right_pane_two_thirds {
+
+  width: 60%;
+
 }
 
 .address_class {
@@ -245,6 +457,30 @@ footer ul li a
   
 }
 
+@media all and (max-width:900px) {
+
+  .footer_class {
+
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+
+  .left_pane_one_third  {
+
+    width: auto;
+    padding: 15px 0px 35px 0px;
+    
+  }
+
+  .right_pane_two_thirds  {
+
+    width: 90%;
+ margin: auto;
+  }
+
+
+}
 
 .link_button {
   
@@ -256,66 +492,30 @@ footer ul li a
   border-color: rgba(0,0,0,0.2);
   border-style: solid;
 
-  
-/* Border: width: 2px; color: black; style: solid; opacity: 0.2. Check out the Color lesson to do that. */
-  
+ 
+ 
 }
+
+.wrapper {
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+
+
 
 .map-frame {
   
-  height: 375px;
-  float: right;
-  width: 60%;
+
   
 }
 
 
-.schedule_table 
 
-{
-  
-  Margin: 0 auto 40px auto;
-  font-size: 1.5em;
-
-
-}
-
-.schedule_table 
-
-{
-  
-  Margin: 0 auto 40px auto;
-  font-size: 1.5em;
-
-
-}
-
-.schedule_table 
-
-{
-  
-  Margin: 20px auto 40px auto;
-  font-size: 1.5em;
-
-  
-
-
-}
-
-.schedule_table td, th
-
-{
-  
-  border-bottom: 1px solid black;
-  padding: 5px 0 10px 10px;
-  text-align: center;
-
-}
-
-.schedule_divider {
-  
-  margin-top: 10px;
-}
 
 .slot_form_container 
 
@@ -360,4 +560,34 @@ footer ul li a
 Padding: 9px 9px 9px 9px; 
 margin-top: 15px;
   
+}
+
+@media all and (max-width:900px) {
+
+  
+
+
+.main_header {
+
+  font-size: 0.5em;
+ 
+  
+}
+
+
+.wrapper {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.service_box { 
+
+  width: 100%;
+}
+
+
 }
